@@ -21,7 +21,6 @@ namespace Avalonia.Boilerplate {
         private async void Button_Click(object? sender, Interactivity.RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
-            await Task.Delay(3000);
             var appWindow = new MyWindow();
             appWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             appWindow.Show(this);
