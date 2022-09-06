@@ -7,6 +7,8 @@ namespace Avalonia.Boilerplate {
     public class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            
 #if DEBUG
             this.AttachDevTools();
 #endif
@@ -20,9 +22,11 @@ namespace Avalonia.Boilerplate {
 
         private async void Button_Click(object? sender, Interactivity.RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            //this.WindowState = WindowState.Minimized;
+            //await Task.Delay(3000);
             var appWindow = new MyWindow();
-            appWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            appWindow.WindowState = WindowState.Maximized;
+            appWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             appWindow.Show(this);
         }
     }
