@@ -10,7 +10,7 @@ namespace Avalonia.Boilerplate {
 
         public override void OnFrameworkInitializationCompleted() {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop) {
-                desktop.MainWindow = new MainWindow();
+                desktop.MainWindow = MainWindow.CreateAggregatorWindow(100, 100);
             }
 
             base.OnFrameworkInitializationCompleted();

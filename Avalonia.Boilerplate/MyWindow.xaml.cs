@@ -10,6 +10,7 @@ namespace Avalonia.Boilerplate
             InitializeComponent();
             Width = 200;
             Height = 200;
+            
 #if DEBUG
             this.AttachDevTools();
 #endif

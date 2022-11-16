@@ -12,5 +12,7 @@
         Padding="40"
 
         >
-    <Button Width="160" x:Name="MyButton" >My Button</Button>
+    <TabControl Name="tabs">
+      
+    </TabControl>
 </Window>
