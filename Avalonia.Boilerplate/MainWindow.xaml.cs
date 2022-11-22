@@ -12,8 +12,10 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml;
 using Avalonia.VisualTree;
 using System.Threading.Tasks;
+using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Threading;
 
 namespace Avalonia.Boilerplate {
     public partial class MainWindow : Window {
@@ -109,6 +111,16 @@ namespace Avalonia.Boilerplate {
                     return;
                 }
                 isMouseInside = true;
+                Dispatcher.UIThread.InvokeAsync(() => {
+                    var w = new MyWindow();
+                    w.ConfigurePosition(this, new Point(53.23, 20), anchor: PopupAnchor.TopLeft, gravity: PopupGravity.BottomRight);
+                    w.ShowPopup();
+
+                    Task.Run(async () => {
+                        await Task.Delay(1000);
+                        Dispatcher.UIThread.InvokeAsync(w.Close);
+                    });
+                });
             };
             tab.PointerLeave += delegate { OnMouseLeft(); };
             tab.Tapped += delegate { OnMouseLeft(); };

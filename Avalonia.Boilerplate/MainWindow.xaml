@@ -9,7 +9,7 @@
         Title="Service Studio Project Neo"
         ExtendClientAreaChromeHints="PreferSystemChrome"
         ExtendClientAreaToDecorationsHint="True"
-        Padding="40"
+        Padding="0"
 
         >
     <TabControl Name="tabs">

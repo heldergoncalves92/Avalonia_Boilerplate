@@ -11,12 +11,6 @@
     <None Remove="MyWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Include="MyWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AvaloniaResource>
-  </ItemGroup>
-  <ItemGroup>
     <AvaloniaXaml Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaXaml>
