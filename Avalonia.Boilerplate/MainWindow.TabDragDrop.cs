@@ -13,9 +13,13 @@ using Avalonia.Layout;
 using Avalonia.Threading;
 using PixelFormat = System.Drawing.Imaging.PixelFormat;
 
-namespace Avalonia.Boilerplate {
+namespace Avalonia.Boilerplate { 
+    
     partial class MainWindow {
         private const int Epsilon = 11;
+        const string ImagesNamespace = "Avalonia.Boilerplate.";
+        public const string GhostSSFacsimileLightImageUri = "resm:" + ImagesNamespace + "GhostTabWindow-Light@2x.png";
+        public const string GhostSSFacsimileDarkImageUri = "resm:" + ImagesNamespace + "GhostTabWindow-Dark@2x.png";
 
         // This is a work around for not being able to change the rounded corners on a Mac window.
         // If someone figures out how to create a right angle cornered Mac window,
@@ -414,12 +418,11 @@ namespace Avalonia.Boilerplate {
             var scaledHeight = (int)(currentSSWindowHeight / 3);
             // load bitmap image
             var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
+            var ghostWindowThemeUri = GhostSSFacsimileLightImageUri;
 
-            var pixelSize = new PixelSize(10, 5);
-            //var bitmap = new RenderTargetBitmap(pixelSize, new Vector(96, 96));
-            //var scaledBitmap = bitmap.CreateScaledBitmap(new PixelSize(scaledWidth, scaledHeight));
-            //var ghostTabImage = new Image { Source = scaledBitmap };
-            var ghostTabImage = new Image { Source = null };
+            var bitmapOrig = new Bitmap(assets.Open(new Uri(ghostWindowThemeUri)));
+            var scaledBitmap = bitmapOrig.CreateScaledBitmap(new PixelSize(scaledWidth, scaledHeight));
+            var ghostTabImage = new Image { Source = scaledBitmap };
 
             var ghostContainer = new Canvas {
                 Background = Brushes.Transparent,

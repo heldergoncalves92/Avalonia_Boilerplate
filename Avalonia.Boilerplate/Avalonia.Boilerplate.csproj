@@ -33,4 +33,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="GhostTabWindow-Dark@2x.png" />
+    <EmbeddedResource Include="GhostTabWindow-Dark@2x.png" />
+    <None Remove="GhostTabWindow-Light@2x.png" />
+    <EmbeddedResource Include="GhostTabWindow-Light@2x.png" />
+  </ItemGroup>
 </Project>
