@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Avalonia.Boilerplate.MainWindow"
-        Title="Avalonia.Boilerplate">
-    Welcome to Avalonia!
+        Title="Avalonia.Boilerplate"
+        Background="Black">
+    <Button Background="Gray" Name="Dialog" ToolTip.Tip="Shows a dialog">_Dialog</Button>
 </Window>
