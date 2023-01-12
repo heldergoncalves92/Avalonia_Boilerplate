@@ -38,6 +38,8 @@ namespace Avalonia.Boilerplate {
 
         private void InitializeComponent() {
             AvaloniaXamlLoader.Load(this);
+            var button = this.GetControl<Button>("Dialog");
+            button.Click += (sender, args) => CreateSampleWindow().Show(this);
         }
     }
 }

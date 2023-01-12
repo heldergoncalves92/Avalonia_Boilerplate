@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f29a1cd-cf3e-4516-825d-605c459e8977" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Avalonia.Boilerplate/Avalonia.Boilerplate.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.Boilerplate/Avalonia.Boilerplate.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.Boilerplate/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.Boilerplate/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.Boilerplate/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.Boilerplate/MainWindow.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1f29a1cd-cf3e-4516-825d-605c459e8977" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +76,7 @@
       <workItem from="1673519266573" duration="59000" />
       <workItem from="1673519422432" duration="259000" />
       <workItem from="1673520158116" duration="629000" />
-      <workItem from="1673528889362" duration="692000" />
+      <workItem from="1673528889362" duration="1005000" />
     </task>
     <servers />
   </component>
