@@ -464,19 +464,7 @@ namespace Avalonia.Boilerplate {
         }
 
         private void SpawnTabToInstance(PixelPoint dropPoint) {
-            var tabTopLevelView = tabBeingMoved.tabItem.Content;
-            var aggregatorWindow = this;
-
-            var newAggregatorWindow = CreateAggregatorWindow(dropPoint.X, dropPoint.Y);
-          
-
-            RemoveTab(tabTopLevelView);
-            //aggregatorWindow.RemoveAggregator(aggregatorPresenter, removeFromView: false);
-            var info = new TabHeaderInfo(false) { IsEnabled = true, Caption = "NewTabTransfered" };
-            newAggregatorWindow.AddTab(info, (Control)tabTopLevelView);
-
-            Dispatcher.UIThread.InvokeAsync(newAggregatorWindow.Show); // show window before changing login to avoid dialogs from appearing before main window shown
-            //newAggregatorWindow.SelectedTopLevelPresenter = aggregatorPresenter; // select tab after has been created, otherwise won't be selected
+           
         }
 
         private static bool IsLoading(TabItem tabItemTest) {

@@ -13,7 +13,7 @@ public partial class CustomTabContent : UserControl {
 
         button.Click += (sender, args) => {
             var w = new MyWindow();
-            w.Show(this.GetVisualRoot() as Window);
+            w.ShowPopup();
         };
     }
 }
