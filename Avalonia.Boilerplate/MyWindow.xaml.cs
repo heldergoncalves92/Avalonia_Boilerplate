@@ -1,7 +1,9 @@
+using System.Runtime.InteropServices;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.Layout;
+using Avalonia.Markup.Xaml;
 using Avalonia.Platform;
 using Avalonia.VisualTree;
 
@@ -15,15 +17,17 @@ namespace Avalonia.Boilerplate
         
         public MyWindow()
         {
+            AvaloniaXamlLoader.Load(this);
+            PseudoClasses.Set(":osx", RuntimeInformation.IsOSPlatform(OSPlatform.OSX));
+
             Width = 650;
             Height = 650;
-            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.SystemChrome;
-            ExtendClientAreaToDecorationsHint = true;
+            CanResize = false;
+            
+            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.PreferSystemChrome;
+            ExtendClientAreaToDecorationsHint = false;
+            this.AttachDevTools();
         }
-        
-        
-
-     
 
         private void UpdatePosition() {
             positioner?.Update(positionerParameters);
@@ -33,14 +37,6 @@ namespace Avalonia.Boilerplate
             positionerParameters.Size = finalSize;
             UpdatePosition();
             return base.ArrangeOverride(finalSize);
-        }
-
-        public void ShowPopup() {
-            if (parent != null) {
-                Show(parent);
-            } else {
-                Show();
-            }
         }
     }
 }

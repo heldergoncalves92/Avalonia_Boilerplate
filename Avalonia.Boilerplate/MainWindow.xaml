@@ -4,8 +4,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         x:Class="Avalonia.Boilerplate.MainWindow"
                 
-        MinWidth="600"
-        MinHeight="600"
+        Width="600"
+        Height="600"
         Title="Service Studio Project Neo"
         ExtendClientAreaChromeHints="PreferSystemChrome"
         ExtendClientAreaToDecorationsHint="True"

@@ -17,6 +17,9 @@
     <AvaloniaXaml Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaXaml>
+    <AvaloniaXaml Include="MyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaXaml>
     <None Remove="CustomTabContent.xaml" />
     <AvaloniaXaml Include="CustomTabContent.xaml" />
   </ItemGroup>

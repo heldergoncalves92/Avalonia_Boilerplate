@@ -28,9 +28,7 @@ namespace Avalonia.Boilerplate {
             var tabInfo = new TabHeaderInfo() { Caption = "Tab 11" };
             AddTab(tabInfo, new CustomTabContent());
 
-#if DEBUG
             this.AttachDevTools();
-#endif
         }
 
         

@@ -8,6 +8,7 @@
     
     <StackPanel>
         <TextBlock Text="I am in the triangle page ! I'll put a button to show you that each page contains what you want." HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button Name="btn">A button in the triangle page !</Button>
+        <Button Name="btn">Open Dialog without parent!</Button>
+        <Button Name="btn-with-parent">Open Dialog with parent!</Button>
     </StackPanel>
 </UserControl>

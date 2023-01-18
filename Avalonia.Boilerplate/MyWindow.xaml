@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Avalonia.Boilerplate.MyWindow"
+        
+
+        >
+    <TabControl Name="tabs">
+      
+    </TabControl>
+    
+    <Window.Styles>
+        
+        <Style Selector="CaptionButtons /template/ Panel#PART_FullScreenButton">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+        <Style Selector="CaptionButtons /template/ Panel#PART_MinimiseButton">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+        <Style Selector="CaptionButtons /template/ Panel#PART_RestoreButton">
+            <Setter Property="IsVisible" Value="True"/>
+        </Style>
+        <Style Selector="CaptionButtons /template/ Panel#PART_CloseButton">
+            <Setter Property="IsVisible" Value="True"/>
+            <Setter Property="IsEnabled" Value="False"/>
+        </Style>
+        <Style Selector=":osx CaptionButtons">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+     
+
+    </Window.Styles>
+</Window>
